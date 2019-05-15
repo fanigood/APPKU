@@ -1,15 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-        android:orientation="horizontal"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_marginTop="2dp"
+        android:orientation="vertical"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
     <LinearLayout
-            android:
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/imageprofil"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" app:srcCompat="@android:drawable/ic_menu_report_image"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:textSize="20dp"
+                        android:textColor="#050101"
+                        android:text="NameUSer"
+                        android:id="@+id/NameUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:textSize="10dp"
+                        android:textColor="#818181"
+                        android:text="Date Post"
+                        android:id="@+id/DatePost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                       <TextView
+                               android:id="@+id/posttext"
+                               android:textColor="#1F1F1F"
+                               android:text="Post"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"/>
+                              <ImageView
+                                      android:layout_gravity="center"
+                                      android:id="@+id/ImagePost"
+                                      android:layout_width="200dp"
+                                      android:layout_height="200dp"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"></LinearLayout>
+            android:layout_height="wrap_content">
 
+        <TextView
+                android:id="@+id/like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-
+        <ImageView
+                android:id="@+id/btlik"
+                android:layout_width="20dp"
+                android:layout_height="20dp"  />
+        <TextView
+                android:id="@+id/Coment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <ImageView
+                android:id="@+id/BtComent"
+                android:layout_width="20dp"
+                android:layout_height="20dp"  />
+    </LinearLayout>
+<View
+        android:background="#585858"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
 </LinearLayout>

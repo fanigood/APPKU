@@ -3,7 +3,9 @@ package com.example.appku
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
+import android.widget.ImageView
 import android.widget.TextView
+import kotlinx.android.synthetic.main.rownotif.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,7 +19,6 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.navigation_notifications -> {
 
-                loadfragmantNotif(FragmentNotif())
 
             }
         }
@@ -32,7 +33,6 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        textMessage = findViewById(R.id.message)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
       loadfragmanpost(FragmentPost())
@@ -42,6 +42,8 @@ class MainActivity : AppCompatActivity() {
     private  fun loadfragmanpost(frag1:FragmentPost){
         val ft= supportFragmentManager.beginTransaction()
         ft.replace(R.id.frame,frag1)
+        ft.commit()
+
 
 
     }
@@ -50,6 +52,7 @@ class MainActivity : AppCompatActivity() {
     {
      val fn= supportFragmentManager.beginTransaction()
         fn.replace(R.id.frame,fragmentNotif)
+        fn.commit()
     }
 
 
